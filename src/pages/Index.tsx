@@ -12,8 +12,18 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative bg-gradient-to-r from-blue-600/90 to-indigo-700/90 text-white py-20 overflow-hidden">
+        {/* Background map */}
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{
+            backgroundImage:
+              "url(https://cdn.poehali.dev/files/d933f743-e919-4c53-887b-fd67f58c5900.jpg)",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/70 to-indigo-700/70" />
+
+        <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold mb-6 font-montserrat">
               Авиационная Метеорология
